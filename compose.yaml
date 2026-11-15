@@ -1,0 +1,14 @@
+services:
+  s3:
+    image: chrislusf/seaweedfs
+    ports:
+      - "127.0.0.1:8333:8333"
+    env_file:
+      - .env
+    environment:
+      S3_BUCKET: dvc-images
+    volumes:
+      - s3-data:/data
+
+volumes:
+  s3-data:

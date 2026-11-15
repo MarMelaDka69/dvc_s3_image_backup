@@ -1,0 +1,5 @@
+[core]
+    remote = storage
+['remote "storage"']
+    url = s3://dvc-images/cache
+    endpointurl = http://127.0.0.1:8333
